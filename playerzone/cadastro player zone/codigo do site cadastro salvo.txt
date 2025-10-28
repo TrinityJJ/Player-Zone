@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <title>Player Zone - Cadastro</title>
+  <style>
+    /* Fundo com degradê laranja escurecido */
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      background: linear-gradient(135deg, #cc4a20, #FF6F3C, #FF9A56, #FFD3B6);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* Container da janela */
+    .cadastro-container {
+      background: rgba(255, 255, 255, 0.95);
+      width: 350px;
+      max-height: 530px;
+      padding: 20px 30px;
+      border-radius: 10px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+      overflow-y: auto;
+    }
+
+    /* Título */
+    .cadastro-container h2 {
+      margin-top: 0;
+      color: #FF6F3C;
+      text-align: center;
+      font-weight: 700;
+      font-size: 1.8em;
+      margin-bottom: 5px;
+      letter-spacing: 2px;
+    }
+
+    /* Subtítulo */
+    .cadastro-container .subtitulo {
+      font-weight: 700;
+      text-align: center;
+      color: #333;
+      margin-top: 0;
+      margin-bottom: 20px;
+      font-size: 1em;
+    }
+
+    /* Formulário */
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    label {
+      font-weight: 600;
+      color: #000;
+      margin-bottom: 5px;
+      font-size: 0.9em;
+    }
+
+    input {
+      padding: 10px;
+      border: 1.8px solid #000;
+      border-radius: 5px;
+      font-size: 1em;
+      outline: none;
+      color: #000;
+      background-color: #fff;
+      transition: border-color 0.3s;
+    }
+
+    input::placeholder {
+      color: #555;
+    }
+
+    input:focus {
+      border-color: #FF0000;
+      box-shadow: 0 0 6px #FF0000;
+    }
+
+    /* Botão principal (Cadastrar) */
+    button[type="submit"] {
+      background-color: #FF0000;
+      color: white;
+      font-weight: 700;
+      padding: 12px;
+      border: none;
+      border-radius: 5px;
+      font-size: 1.1em;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      margin-top: 10px;
+    }
+
+    button[type="submit"]:hover {
+      background-color: #cc0000;
+    }
+
+    /* Botão pequeno de login */
+    .botao-login {
+      background: none;
+      border: none;
+      color: #FF0000;
+      font-weight: bold;
+      font-size: 0.9em;
+      text-align: center;
+      margin-top: 5px;
+      cursor: pointer;
+      text-decoration: underline;
+      padding: 5px;
+    }
+
+    .botao-login:hover {
+      color: #cc0000;
+    }
+
+    /* Scrollbar estilizada */
+    .cadastro-container::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    .cadastro-container::-webkit-scrollbar-thumb {
+      background-color: #FF6F3C;
+      border-radius: 3px;
+    }
+
+    @media (max-width: 400px) {
+      .cadastro-container {
+        width: 90%;
+        max-height: 80vh;
+        padding: 15px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="cadastro-container">
+    <h2>Player Zone</h2>
+    <p class="subtitulo">Cadastre gratuitamente ou faça login</p>
+    <form>
+      <div>
+        <label for="nome">Nome</label>
+        <input type="text" id="nome" name="nome" placeholder="Seu nome" required />
+      </div>
+
+      <div>
+        <label for="sobrenome">Sobrenome</label>
+        <input type="text" id="sobrenome" name="sobrenome" placeholder="Seu sobrenome" required />
+      </div>
+
+      <div>
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="seuemail@exemplo.com" required />
+      </div>
+
+      <div>
+        <label for="senha">Senha</label>
+        <input type="password" id="senha" name="senha" placeholder="Digite sua senha" required />
+      </div>
+
+      <div>
+        <label for="data-nascimento">Data de Nascimento</label>
+        <input type="date" id="data-nascimento" name="data-nascimento" required />
+      </div>
+
+      <div>
+        <label for="telefone">Número de Telefone</label>
+        <input type="tel" id="telefone" name="telefone" placeholder="(99) 99999-9999" pattern="\(\d{2}\) \d{4,5}-\d{4}" required />
+      </div>
+
+      <div>
+        <label for="cpf">CPF</label>
+        <input type="text" id="cpf" name="cpf" placeholder="000.000.000-00" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" required />
+      </div>
+
+      <button type="submit">Cadastrar</button>
+      <button type="button" class="botao-login">Ou faça login com nome de usuário</button>
+    </form>
+  </div>
+
+</body>
+</html>

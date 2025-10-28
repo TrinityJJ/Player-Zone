@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+
+    <link rel="icon" type="image/png" href="imagens/logo-player-zone.png" />
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Player Zone - Notícias de Games</title>
+    <meta name="description" content="Player Zone - O melhor portal de notícias de games. Cobertura completa de todos os gêneros de jogos, análises, guias e comunidade.">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <h1>Player Zone</h1>
+                    <span>Notícias de Games</span>
+                </div>
+                <nav class="nav-menu">
+                    <ul>
+                        <li><a href="#home" class="active">Home</a></li>
+                        <li><a href="#news">Notícias</a></li>
+                        <li><a href="#reviews">Análises</a></li>
+                        <li><a href="#guides">Guias</a></li>
+                        <li><a href="#videos">Vídeos</a></li>
+                        <li><a href="#community">Comunidade</a></li>
+                        <li><a href="#about">Sobre</a></li>
+                    </ul>
+                    <ul>
+                </nav>
+                <div class="header-actions">
+                    <button class="search-btn"><i class="fas fa-search"></i></button>
+                    <div id="user-profile" class="user-profile hidden">
+                        <div class="profile-dropdown">
+                            <button class="profile-btn" onclick="toggleProfileDropdown()">
+                                <img id="profile-avatar" src="https://via.placeholder.com/40x40/FF6B35/FFFFFF?text=U" alt="Perfil" class="profile-avatar">
+                                <span id="profile-name">Usuário</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div id="profile-dropdown-content" class="profile-dropdown-content hidden">
+                                <div class="profile-info">
+                                    <img id="profile-avatar-large" src="https://via.placeholder.com/80x80/FF6B35/FFFFFF?text=U" alt="Perfil" class="profile-avatar-large">
+                                    <h3 id="profile-full-name">Nome Completo</h3>
+                                    <p id="profile-email">email@exemplo.com</p>
+                                </div>
+                                <div class="profile-actions">
+                                    <button onclick="goToProfile()">Meu Perfil</button>
+                                    <button onclick="logout()">Sair</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="menu-toggle"><i class="fas fa-bars"></i></button>
+                    <div class="mode-toggle">
+                        <button id="dark-mode-toggle" title="Alternar modo escuro" class="dark-mode-btn">
+                            <span class="dark-mode-icon"><i class="fas fa-moon"></i></span>
+                        </button>
+                    </div>
+                    <div class="auth-buttons" id="auth-buttons">
+                        <button class="login-btn" id="openLoginModal">Login</button>
+                        <button class="register-btn" onclick="window.location.href='cadastro player zone/index.html'">Registrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h2>As últimas notícias do mundo dos games</h2>
+                <p>Cobertura completa de todos os gêneros, análises profundas e comunidade vibrante</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured News -->
+    <section class="featured-news">
+        <div class="container">
+            <div class="section-header">
+                <h2>Destaques</h2>
+                <a href="#news" class="view-all">Ver todas <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="featured-grid">
+                <article class="featured-main">
+                    <img src="imagens/gta6.png" alt="Destaque Principal">
+                    <div class="article-content">
+                        <span class="category">Ação</span>
+                        <h3>Grand Theft Auto VI: Novos detalhes revelados sobre o mapa</h3>
+                        <p>Rockstar Games compartilha informações exclusivas sobre o tamanho e complexidade do novo mapa...</p>
+                        <div class="article-meta">
+                            <span><i class="far fa-clock"></i> 2 horas atrás</span>
+                            <span><i class="far fa-eye"></i> 15.2k visualizações</span>
+                        </div>
+                    </div>
+                </article>
+                <div class="featured-side">
+                    <article class="side-item">
+                        <img src="imagens/witcher.png.png" alt="Notícia">
+                        <div class="side-content">
+                            <span class="category">RPG</span>
+                            <h4>The Witcher 4: CD Projekt anuncia desenvolvimento</h4>
+                            <span class="time">1 hora atrás</span>
+                        </div>
+                    </article>
+                    <article class="side-item">
+                        <img src="imagens/lol.png" alt="Notícia">
+                        <div class="side-content">
+                            <span class="category">eSports</span>
+                            <h4>League of Legends: Worlds 2024 tem data confirmada</h4>
+                            <span class="time">3 horas atrás</span>
+                        </div>
+                    </article>
+                    <article class="side-item">
+                        <img src="imagens/ps5.jpg" alt="Notícia">
+                        <div class="side-content">
+                            <span class="category">Tecnologia</span>
+                            <h4>PS5 Pro: Sony revela especificações técnicas</h4>
+                            <span class="time">5 horas atrás</span>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Latest News -->
+    <section id="news" class="latest-news">
+        <div class="container">
+            <div class="section-header">
+                <h2>Últimas Notícias</h2>
+                <div class="filter-tabs">
+                    <button class="filter-btn active" data-filter="all">Todas</button>
+                    <button class="filter-btn" data-filter="acao">Ação</button>
+                    <button class="filter-btn" data-filter="rpg">RPG</button>
+                    <button class="filter-btn" data-filter="esports">eSports</button>
+                    <button class="filter-btn" data-filter="tecnologia">Tecnologia</button>
+                </div>
+            </div>
+            <div class="news-grid">
+                <article class="news-card" data-category="acao">
+                    <img src="imagens/cod.png" alt="Call of Duty">
+                    <div class="card-content">
+                        <span class="category">Ação</span>
+                        <h3>Call of Duty: Modern Warfare IV chega em outubro</h3>
+                        <p>Activision confirma data de lançamento e revela novo modo multiplayer...</p>
+                        <div class="card-meta">
+                            <span><i class="far fa-clock"></i> 4 horas atrás</span>
+                            <span><i class="far fa-comment"></i> 42 comentários</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="news-card" data-category="rpg">
+                    <img src="imagens/baldur.png" alt="Baldur's Gate">
+                    <div class="card-content">
+                        <span class="category">RPG</span>
+                        <h3>Baldur's Gate 3: Patch 7 traz novas missões</h3>
+                        <p>Larian Studios adiciona conteúdo épico para aventuras de D&D...</p>
+                        <div class="card-meta">
+                            <span><i class="far fa-clock"></i> 6 horas atrás</span>
+                            <span><i class="far fa-comment"></i> 28 comentários</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="news-card" data-category="esports">
+                    <img src="imagens/valorant.png" alt="Valorant">
+                    <div class="card-content">
+                        <span class="category">eSports</span>
+                        <h3>Valorant Champions: Sentinels vencem título mundial</h3>
+                        <p>Equipe norte-americana conquista seu primeiro Champions...</p>
+                        <div class="card-meta">
+                            <span><i class="far fa-clock"></i> 8 horas atrás</span>
+                            <span><i class="far fa-comment"></i> 67 comentários</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="news-card" data-category="tecnologia">
+                    <img src="imagens/rtx.png" alt="RTX 5090">
+                    <div class="card-content">
+                        <span class="category">Tecnologia</span>
+                        <h3>NVIDIA RTX 5090: Preço e data de lançamento</h3>
+                        <p>Nova geração de GPUs promete 2x performance do RTX 4090...</p>
+                        <div class="card-meta">
+                            <span><i class="far fa-clock"></i> 10 horas atrás</span>
+                            <span><i class="far fa-comment"></i> 89 comentários</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            <button class="load-more">Carregar mais notícias</button>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section id="reviews" class="reviews">
+        <div class="container">
+            <div class="section-header">
+                <h2>Análises Recentes</h2>
+                <a href="#reviews" class="view-all">Ver todas <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="reviews-grid">
+                <article class="review-card">
+                    <img src="imagens/star.png" alt="Análise do Jogo 1">
+                    <div class="review-content">
+                        <h3>Starfield: A Nova Odisseia da Bethesda</h3>
+                        <p>Exploramos os confins do espaço em busca de respostas e aventuras...</p>
+                        <div class="review-meta">
+                            <span><i class="far fa-clock"></i> 1 dia atrás</span>
+                            <span><i class="far fa-star"></i> 9.5/10</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="review-card">
+                    <img src="imagens/spider.png" alt="Análise do Jogo 2">
+                    <div class="review-content">
+                        <h3>Marvel's Spider-Man 2: A Aventura Continua</h3>
+                        <p>Peter Parker e Miles Morales juntos em uma nova missão para salvar Nova York...</p>
+                        <div class="review-meta">
+                            <span><i class="far fa-clock"></i> 2 dias atrás</span>
+                            <span><i class="far fa-star"></i> 9.0/10</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="review-card">
+                    <img src="imagens/Hogwarts.png" alt="Análise do Jogo 3">
+                    <div class="review-content">
+                        <h3>Hogwarts Legacy: A Magia Está no Ar</h3>
+                        <p>Uma nova era de magia e aventura no universo de Harry Potter...</p>
+                        <div class="review-meta">
+                            <span><i class="far fa-clock"></i> 3 dias atrás</span>
+                            <span><i class="far fa-star"></i> 8.5/10</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Guides Section -->
+    <section id="guides" class="guides">
+        <div class="container">
+            <div class="section-header">
+                <h2>Guias e Dicas</h2>
+                <a href="#guides" class="view-all">Ver todos <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="guides-grid">
+                <article class="guide-card">
+                    <img src="imagens/2023.png" alt="Guia do Jogo 1">
+                    <div class="guide-content">
+                        <h3>Os 10 Melhores Jogos de 2023</h3>
+                        <p>Uma análise dos jogos que mais se destacaram este ano...</p>
+                    </div>
+                </article>
+                <article class="guide-card">
+                    <img src="imagens/gamer.png" alt="Guia do Jogo 2">
+                    <div class="guide-content">
+                        <h3>Como Montar um PC Gamer em 2023</h3>
+                        <p>Componentes, dicas e truques para você montar sua máquina dos sonhos...</p>
+                    </div>
+                </article>
+                <article class="guide-card">
+                    <img src="imagens/itens.png" alt="Guia do Jogo 3">
+                    <div class="guide-content">
+                        <h3>Os Melhores Periféricos para Gamers</h3>
+                        <p>Teclados, mouses, headsets e mais: o que há de melhor no mercado...</p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Videos Section -->
+    <section id="videos" class="videos">
+        <div class="container">
+            <div class="section-header">
+                <h2>Vídeos Recentes</h2>
+                <a href="#videos" class="view-all">Ver todos <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="videos-grid">
+                <article class="video-card">
+                    <div class="video-thumbnail">
+                        <iframe width="100%" height="315" src="https://www.youtube.com/embed/OvCbaYSbMPY?si=RZMNn10_ZkZraTqj" 
+                            title="Análise Completa de Starfield" frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                    <div class="video-content">
+                        <h3>Análise Completa de Starfield</h3>
+                        <p>Descubra tudo sobre o mais novo RPG da Bethesda com nossa análise detalhada.</p>
+                    </div>
+                </article>
+                <article class="video-card">
+                    <div class="video-thumbnail">
+                        <iframe width="100%" height="315" src="https://www.youtube.com/embed/9UmkXtqL8SI?si=L6yOKt-P_w6XNFsH" 
+                            title="Os Melhores Momentos de League of Legends" frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                    <div class="video-content">
+                        <h3>Os Melhores Momentos de League of Legends</h3>
+                        <p>Uma compilação épica das melhores jogadas e momentos do campeonato...</p>
+                    </div>
+                </article>
+                <article class="video-card">
+                    <div class="video-thumbnail">
+                        <iframe width="100%" height="315" src="https://www.youtube.com/embed/q3U4AF7sGBo?si=7SgcU598PG4qtT5V" 
+                            title="Como Fazer Streaming de Jogos: Guia Completo" frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                    <div class="video-content">
+                        <h3>Como Fazer Streaming de Jogos: Guia Completo</h3>
+                        <p>Dicas e truques para você começar sua carreira como streamer...</p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Community Section -->
+    <section id="community" class="community">
+        <div class="container">
+            <div class="section-header">
+                <h2>Comunidade</h2>
+                <a href="#community" class="view-all">Ver todas <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="community-content">
+                <p>Participe das nossas discussões, eventos e muito mais!</p>
+                <button class="join-btn">Quero Participar!</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2>Sobre Nós</h2>
+            </div>
+            <div class="about-content">
+                <p>Somos apaixonados por games e dedicados a trazer as últimas notícias, análises e guias para você.</p>
+                <p>Nosso objetivo é criar uma comunidade unida e bem informada sobre o universo dos jogos.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h1>Player Zone</h1>
+                    <span>Notícias de Games</span>
+                </div>
+                <nav class="footer-menu">
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#news">Notícias</a></li>
+                        <li><a href="#reviews">Análises</a></li>
+                        <li><a href="#guides">Guias</a></li>
+                        <li><a href="#videos">Vídeos</a></li>
+                        <li><a href="#community">Comunidade</a></li>
+                        <li><a href="#about">Sobre</a></li>
+                    </ul>
+                </nav>
+                <div class="footer-social">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Barra de busca global -->
+    <div class="global-search">
+      <form action="/buscar" method="GET">
+        <input type="text" name="q" placeholder="Buscar matérias, jogos, análises..." required>
+        <button type="submit"><i class="fas fa-search"></i></button>
+      </form>
+    </div>
+
+    <!-- Scripts originais -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    <script src="/javascript/script.js"></script>
+    <script>
+        // Alternar modo escuro
+        const toggle = document.getElementById('dark-mode-toggle');
+        toggle.addEventListener('click', function() {
+            document.body.classList.toggle('dark-mode');
+            if (document.body.classList.contains('dark-mode')) {
+                localStorage.setItem('dark-mode', 'on');
+            } else {
+                localStorage.setItem('dark-mode', 'off');
+            }
+        });
+
+        // Verificar o estado do modo escuro ao carregar a página
+        if (localStorage.getItem('dark-mode') === 'on') {
+            document.body.classList.add('dark-mode');
+        }
+    </script>
+
+    <!-- Modal de Login -->
+    <div id="loginModal" class="modal-overlay" aria-hidden="true">
+      <div class="modal">
+        <button class="close-btn" id="closeModal" aria-label="Fechar">✕</button>
+        <h2>Entrar na sua conta</h2>
+        <p>Faça login para acessar conteúdos exclusivos. Ou feche e continue navegando.</p>
+
+        <form id="loginForm">
+          <div class="field">
+            <label for="email">E-mail</label>
+            <input id="email" name="email" type="email" required placeholder="seu@exemplo.com">
+          </div>
+          <div class="field">
+            <label for="password">Senha</label>
+            <input id="password" name="password" type="password" required placeholder="••••••••">
+          </div>
+
+          <div class="actions">
+            <button type="submit" class="btn btn-primary">Entrar</button>
+            <button type="button" id="continueBtn" class="btn btn-ghost">Entrar depois</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <style>
+      .modal-overlay {
+        position: fixed;
+        inset: 0;
+        background: rgba(0,0,0,0.6);
+        display: none;
+        justify-content: center;
+        align-items: center;
+        z-index: 2000;
+      }
+      .modal-overlay.show { display: flex; }
+      .modal {
+        background: #fff;
+        border-radius: 10px;
+        padding: 1.5rem;
+        width: 100%;
+        max-width: 400px;
+        position: relative;
+        box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+      }
+      .close-btn {
+        position: absolute;
+        top: 8px;
+        right: 12px;
+        border: none;
+        background: transparent;
+        font-size: 1.3rem;
+        cursor: pointer;
+      }
+      .field { margin-bottom: 1rem; }
+      .field label { display: block; margin-bottom: .3rem; font-weight: 500; }
+      .field input {
+        width: 100%; padding: .6rem; border: 1px solid #ddd; border-radius: 6px;
+      }
+      .actions { display: flex; gap: .5rem; margin-top: 1rem; }
+      .btn { padding: .6rem 1rem; border: none; border-radius: 6px; cursor: pointer; }
+      .btn-primary { background: #4f46e5; color: white; }
+      .btn-ghost { background: #f1f5f9; }
+    </style>
+
+    <script>
+        const modalOverlay = document.getElementById('loginModal');
+        const closeBtn = document.getElementById('closeModal');
+        const continueBtn = document.getElementById('continueBtn');
+        const loginForm = document.getElementById('loginForm');
+
+        window.addEventListener('load', () => {
+          modalOverlay.classList.add('show');
+          document.body.style.overflow = 'hidden';
+        });
+
+        function closeModal() {
+          modalOverlay.classList.remove('show');
+          document.body.style.overflow = '';
+        }
+        closeBtn.addEventListener('click', closeModal);
+        continueBtn.addEventListener('click', closeModal);
+        modalOverlay.addEventListener('click', (e) => { if(e.target === modalOverlay) closeModal(); });
+        window.addEventListener('keydown', (e) => { if(e.key === 'Escape') closeModal(); });
+
+        loginForm.addEventListener('submit', (e) => {
+          e.preventDefault();
+          const email = document.getElementById('email').value;
+          const pass = document.getElementById('password').value;
+          if(email && pass) {
+            alert('Login feito! (exemplo)');
+            closeModal();
+          } else {
+            alert('Preencha todos os campos.');
+          }
+        });
+    </script>
+</body>
+</html>

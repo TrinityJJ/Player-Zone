@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notícias - DOGS</title>
+    <meta name="description" content="Todas as notícias de games em um só lugar. Filtre por categoria e fique por dentro do mundo dos games.">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/noticias.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <h1>DOGS</h1>
+                    <span>Notícias de Games</span>
+                </div>
+                <nav class="nav-menu">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="noticias.html" class="active">Notícias</a></li>
+                        <li><a href="analises.html">Análises</a></li>
+                        <li><a href="guias.html">Guias</a></li>
+                        <li><a href="videos.html">Vídeos</a></li>
+                        <li><a href="comunidade.html">Comunidade</a></li>
+                        <li><a href="sobre.html">Sobre</a></li>
+                    </ul>
+                </nav>
+                <div class="header-actions">
+                    <button class="search-btn"><i class="fas fa-search"></i></button>
+                    <button class="menu-toggle"><i class="fas fa-bars"></i></button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Todas as Notícias</h1>
+            <p>Fique por dentro das últimas novidades do mundo dos games</p>
+        </div>
+    </section>
+
+    <!-- News Content -->
+    <section class="news-content">
+        <div class="container">
+            <div class="news-layout">
+                <!-- Sidebar -->
+                <aside class="news-sidebar">
+                    <div class="sidebar-section">
+                        <h3>Categorias</h3>
+                        <ul class="category-list">
+                            <li><a href="#" data-category="all" class="active">Todas</a></li>
+                            <li><a href="#" data-category="acao">Ação</a></li>
+                            <li><a href="#" data-category="rpg">RPG</a></li>
+                            <li><a href="#" data-category="esportes">Esportes</a></li>
+                            <li><a href="#" data-category="esports">eSports</a></li>
+                            <li><a href="#" data-category="tecnologia">Tecnologia</a></li>
+                            <li><a href="#" data-category="atualizacoes">Atualizações</a></li>
+                            <li><a href="#" data-category="curiosidades">Curiosidades</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="sidebar-section">
+                        <h3>Mais Lidas</h3>
+                        <div class="trending-news">
+                            <article class="trending-item">
+                                <img src="https://via.placeholder.com/80x60/FF6B35/FFFFFF?text=1" alt="Trending">
+                                <div>
+                                    <h4>GTA VI tem data oficial revelada</h4>
+                                    <span>125k visualizações</span>
+                                </div>
+                            </article>
+                            <article class="trending-item">
+                                <img src="https://via.placeholder.com/80x60/4A90E2/FFFFFF?text=2" alt="Trending">
+                                <div>
+                                    <h4>Nintendo Switch 2 confirmada</h4>
+                                    <span>98k visualizações</span>
+                                </div>
+                            </article>
+                            <article class="trending-item">
+                                <img src="https://via.placeholder.com/80x60/50C878/FFFFFF?text=3" alt="Trending">
+                                <div>
+                                    <h4>Counter-Strike 2 tem novo mapa</h4>
+                                    <span>87k visualizações</span>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                    
+                    <div class="sidebar-section">
+                        <h3>Newsletter</h3>
+                        <form class="newsletter-form">
+                            <input type="email" placeholder="Seu email" required>
+                            <button type="submit">Inscrever</button>
+                        </form>
+                    </div>
+                </aside>
+
+                <!-- Main Content -->
+                <main class="news-main">
+                    <div class="news-header">
+                        <h2>Últimas Notícias</h2>
+                        <div class="news-controls">
+                            <select class="sort-select">
+                                <option value="recent">Mais Recentes</option>
+                                <option value="popular">Mais Populares</option>
+                                <option value="comments">Mais Comentados</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="news-list">
+                        <article class="news-item" data-category="acao">
+                            <img src="https://via.placeholder.com/300x200/FF6B35/FFFFFF?text=GTA+VI" alt="GTA VI">
+                            <div class="news-item-content">
+                                <span class="category">Ação</span>
+                                <h3>Grand Theft Auto VI: Rockstar confirma lançamento para 2025</h3>
+                                <p>Após anos de especulação, Rockstar Games finalmente anunciou a data oficial de lançamento de GTA VI. O jogo chegará em 2025 com mapa duas vezes maior que GTA V...</p>
+                                <div class="news-meta">
+                                    <span><i class="far fa-clock"></i> 2 horas atrás</span>
+                                    <span><i class="far fa-eye"></i> 125.4k visualizações</span>
+                                    <span><i class="far fa-comment"></i> 342 comentários</span>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="news-item" data-category="rpg">
+                            <img src="https://via.placeholder.com/300x200/9B59B6/FFFFFF?text=Elder+Scrolls" alt="Elder Scrolls">
+                            <div class="news-item-content">
+                                <span class="category">RPG</span>
+                                <h3>The Elder Scrolls VI: Bethesda revela primeiras imagens</h3>
+                                <p>Os fãs da série Elder Scrolls finalmente tiveram um vislumbre do próximo capítulo. Bethesda mostrou imagens impressionantes do novo mundo de Tamriel...</p>
+                                <div class="news-meta">
+                                    <span><i class="far fa-clock"></i> 4 horas atrás</span>
+                                    <span><i class="far fa-eye"></i> 89.2k visualizações</span>
+                                    <span><i class="far fa-comment"></i> 156 comentários</span>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="news-item" data-category="esports">
+                            <img src="https://via.placeholder.com/300x200/3498DB/FFFFFF?text=LoL+Worlds" alt="LoL Worlds">
+                            <div class="news-item-content">
+                                <span class="category">eSports</span>
+                                <h3>League of Legends Worlds 2024: T1 conquista o tetra campeonato</h3>
+                                <p>A equipe sul-coreana T1 fez história ao conquistar seu quarto título mundial de League of Legends. Faker consolidou sua lenda como o maior jogador de todos os tempos...</p>
+                                <div class="news-meta">
+                                    <span><i class="far fa-clock"></i> 6 horas atrás</span>
+                                    <span><i class="far fa-eye"></i> 234.7k visualizações</span>
+                                    <span><i class="far fa-comment"></i> 567 comentários</span>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="news-item" data-category="tecnologia">
+                            <img src="https://via.placeholder.com/300x200/2ECC71/FFFFFF?text=PS5+Pro" alt="PS5 Pro">
+                            <div class="news-item-content">
+                                <span class="category">Tecnologia</span>
+                                <h3>PlayStation 5 Pro: Sony revela preço e data de lançamento</h3>
+                                <p>A Sony finalmente revelou os detalhes do aguardado PS5 Pro. O console chegará em novembro com preço sugerido de R$ 4.999 e promete 2x performance...</p>
+                                <div class="news-meta">
+                                    <span><i class="far fa-clock"></i> 8 horas atrás</span>
+                                    <span><i class="far fa-eye"></i> 178.3k visualizações</span>
+                                    <span><i class="far fa-comment"></i> 423 comentários</span>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="news-item" data-category="esportes">
+                            <img src="https://via.placeholder.com/300x200/E74C3C/FFFFFF?text=FIFA+25" alt="FIFA 25">
+                            <div class="news-item-content">
+                                <span class="category">Esportes</span>
+                                <h3>EA Sports FC 25: Novos modos e melhorias no gameplay</h3>
+                                <p>O novo EA Sports FC 25 traz modos inovadores incluindo um sistema de carreira expandido e novas ligas licenciadas. Os fãs de futebol virtual estão empolgados...</p>
+                                <div class="news-meta">
+                                    <span><i class="far fa-clock"></i> 10 horas atrás</span>
+                                    <span><i class="far fa-eye"></i> 92.1k visualizações</span>
+                                    <span><i class="far fa-comment"></i> 289 comentários</span>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="news-item" data-category="atualizacoes">
+                            <img src="https://via.placeholder.com/300x200/F39C12/FFFFFF?text=Fortnite" alt="Fortnite">
+                            <div class="news-item-content">
+                                <span class="category">Atualizações</span>
+                                <h3>Fortnite Capítulo 5: Nova temporada traz mapa completamente redesenhado</h3>
+                                <p>Epic Games lançou a nova temporada de Fortnite com um mapa totalmente novo, armas inovadoras e colaborações surpreendentes com franquias populares...</p>
+                                <div class="news-meta">
+                                    <span><i class="far fa-clock"></i> 12 horas atrás</span>
+                                    <span><i class="far fa-eye"></i> 156.8k visualizações</span>
+                                    <span><i class="far fa-comment"></i> 378 comentários</span>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="news-item" data-category="curiosidades">
+                            <img src="https://via.placeholder.com/300x200/8E44AD/FFFFFF?text=Curiosidade" alt="Curiosidade">
+                            <div class="news-item-content">
+                                <span class="category">Curiosidades</span>
+                                <h3>Speedrunner completa Super Mario 64 em menos de 15 minutos</h3>
+                                <p>Um speedrunner talentoso quebrou o recorde mundial ao completar Super Mario 64 em apenas 14 minutos e 35 segundos, utilizando glitches impressionantes...</p>
+                                <div class="news-meta">
+                                    <span><i class="far fa-clock"></i> 14 horas atrás</span>
+                                    <span><i class="far fa-eye"></i> 67.4k visualizações</span>
+                                    <span><i class="far fa-comment"></i> 198 comentários</span>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="news-item" data-category="rpg">
+                            <img src="https://via.placeholder.com/300x200/34495E/FFFFFF?text=Dragon+Age" alt="Dragon Age">
+                            <div class="news-item-content">
+                                <span class="category">RPG</span>
+                                <h3>Dragon Age: Dreadwolf - BioWare confirma lançamento para 2024</h3>
+                                <p>Após anos de desenvolvimento, BioWare finalmente anunciou a data de lançamento de Dragon Age: Dreadwolf. O novo RPG promete revolucionar a série...</p>
+                                <div class="news-meta">
+                                    <span><i class="far fa-clock"></i> 16 horas atrás</span>
+                                    <span><i class="far fa-eye"></i> 134.2k visualizações</span>
+                                    <span><i class="far fa-comment"></i> 445 comentários</span>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="pagination">
+                        <button class="pagination-btn active">1</button>
+                        <button class="pagination-btn">2</button>
+                        <button class="pagination-btn">3</button>
+                        <button class="pagination-btn">4</button>
+                        <button class="pagination-btn">5</button>
+                        <button class="pagination-btn next">Próximo <i class="fas fa-chevron-right"></i></button>
+                    </div>
+                </main>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>DOGS</h3>
+                    <p>O melhor portal de notícias de games. Cobertura completa de todos os gêneros de jogos, análises profundas e comunidade vibrante.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-discord"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Categorias</h3>
+                    <ul>
+                        <li><a href="noticias.html?categoria=acao">Ação</a></li>
+                        <li><a href="noticias.html?categoria=rpg">RPG</a></li>
+                        <li><a href="noticias.html?categoria=esports">eSports</a></li>
+                        <li><a href="noticias.html?categoria=tecnologia">Tecnologia</a></li>
+                        <li><a href="noticias.html?categoria=atualizacoes">Atualizações</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Links Rápidos</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="noticias.html">Notícias</a></li>
+                        <li><a href="analises.html">Análises</a></li>
+                        <li><a href="guias.html">Guias</a></li>
+                        <li><a href="videos.html">Vídeos</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Newsletter</h3>
+                    <p>Receba as últimas notícias diretamente no seu email</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Seu email" required>
+                        <button type="submit">Inscrever</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 DOGS. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/noticias.js" defer></script>
+</body>
+</html>
